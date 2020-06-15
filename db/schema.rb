@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_14_232004) do
+ActiveRecord::Schema.define(version: 2020_06_15_000821) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,52 @@ ActiveRecord::Schema.define(version: 2020_06_14_232004) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admin_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
+  create_table "distributors", force: :cascade do |t|
+    t.string "email"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "licenses", force: :cascade do |t|
+    t.integer "idSubskrypcji"
+    t.integer "idProduktu"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "plans", force: :cascade do |t|
+    t.string "Nazwa"
+    t.integer "Cena"
+    t.integer "CzasTrwania"
+    t.integer "DarmowyOkres"
+    t.integer "idProduktu"
+    t.integer "IloscLicencji"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string "Nazwa"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "subscriptions", force: :cascade do |t|
+    t.integer "idKlienta"
+    t.integer "idPlanu"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.string "imie"
+    t.string "nazwisko"
+    t.string "nrtel"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

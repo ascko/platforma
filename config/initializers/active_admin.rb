@@ -5,7 +5,6 @@ ActiveAdmin.setup do |config|
   # for each of the active admin pages.
   #
   config.site_title = "Platforma"
-
   # Set the link url for the title. For example, to take
   # users to your main site. Defaults to no link.
   #
@@ -33,7 +32,7 @@ ActiveAdmin.setup do |config|
   #   config.default_namespace = false
   #
   # Default:
-  config.default_namespace = false
+  # config.default_namespace = :dashboard
   #
   # You can customize the settings for each namespace by using
   # a namespace block. For example, to change the site title

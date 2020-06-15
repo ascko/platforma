@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idKlienta: 1
+  idPlanu: 1
+
+two:
+  idKlienta: 1
+  idPlanu: 1

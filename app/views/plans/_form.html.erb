@@ -1,0 +1,47 @@
+<%= form_with(model: plan, local: true) do |form| %>
+  <% if plan.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(plan.errors.count, "error") %> prohibited this plan from being saved:</h2>
+
+      <ul>
+      <% plan.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Nazwa %>
+    <%= form.text_field :Nazwa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Cena %>
+    <%= form.number_field :Cena %>
+  </div>
+
+  <div class="field">
+    <%= form.label :CzasTrwania %>
+    <%= form.number_field :CzasTrwania %>
+  </div>
+
+  <div class="field">
+    <%= form.label :DarmowyOkres %>
+    <%= form.number_field :DarmowyOkres %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idProduktu %>
+    <%= form.number_field :idProduktu %>
+  </div>
+
+  <div class="field">
+    <%= form.label :IloscLicencji %>
+    <%= form.number_field :IloscLicencji %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

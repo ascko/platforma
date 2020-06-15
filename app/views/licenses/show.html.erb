@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Idsubskrypcji:</strong>
+  <%= @license.idSubskrypcji %>
+</p>
+
+<p>
+  <strong>Idproduktu:</strong>
+  <%= @license.idProduktu %>
+</p>
+
+<%= link_to 'Edit', edit_license_path(@license) %> |
+<%= link_to 'Back', licenses_path %>

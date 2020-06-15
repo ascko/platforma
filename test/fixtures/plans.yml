@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Nazwa: MyString
+  Cena: 1
+  CzasTrwania: 1
+  DarmowyOkres: 1
+  idProduktu: 1
+  IloscLicencji: 1
+
+two:
+  Nazwa: MyString
+  Cena: 1
+  CzasTrwania: 1
+  DarmowyOkres: 1
+  idProduktu: 1
+  IloscLicencji: 1
