@@ -2,15 +2,15 @@ class SubscriptionsController < InheritedResources::Base
 
   #private
 
-  #  def subscription_params
-  #    params.require(:subscription).permit(:idKlienta, :idPlanu)
-  #  end
+  def subscription_params
+    params.require(:subscription).permit(:idKlienta, :idPlanu)
+  end
   api :GET, '/v1/subscriptions/:id', "Zwraca podstawowe informacje o subskrypcji"
-  def show
+  def wow
   end
 
   api :GET, '/v1/subscriptions', "Zwraca subskrypcje zalogowanego dystrybutora"
-  def index
+  def prefex
   end
 
   api :POST, '/v1/subscriptions', "Tworzy subskrypcje"
@@ -18,11 +18,11 @@ class SubscriptionsController < InheritedResources::Base
     param :idPlanu, Integer,  :required => true
     param :idKlienta, String,  :required => true
   end
-  def create
+  def kate
   end
 
   api :DELETE, '/subscriptions/:id', "Usuwa subskrypcje"
-  def destroy
+  def kieroy
   end
 
 end
